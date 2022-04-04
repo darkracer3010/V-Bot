@@ -14,7 +14,7 @@ def hello():
 def about():
         s=pyttsx3.init()
         s.setProperty("rate",150)
-        s.say("I am just a voice assistant who wants to help you with your taks, My name is based on character from Cyberpunk 2077")
+        s.say("I am just a voice assistant who wants to help you with your tasks, My name is based on character from Cyberpunk 2077")
         s.runAndWait()
 def search():
         s=pyttsx3.init()
