@@ -81,7 +81,7 @@ while(1):
                         s.runAndWait()
                         webbrowser.open("https://share.streamlit.io/darkracer3010/v-bot/main/form.py")
                         break
-            elif('scan my face' in speech or 'scan' in speech):
+            elif('scan' in speech or 'scan image' in speech):
                 s.say("Scanning")
                 s.runAndWait()
                 face1()
