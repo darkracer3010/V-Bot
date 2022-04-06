@@ -6,8 +6,8 @@ import webbrowser
 import cv2
 from deepface import DeepFace  
 def face1():
-    img=cv2.read('1161702.png')
-    pred=DeepFace.analyze(img)
+    img=cv2.imread('1161702.png')
+    pred=DeepFace.analyze(img,enforce_detection=False)
     print(pred['dominant_emotion'],pred['gender'])
 def hello():
     s=pyttsx3.init()
@@ -74,24 +74,24 @@ while(1):
             p(speech)
             if('search' in speech):
                 search()
-            elif('tell me about yourself' or 'about yourself' in speech):
+            elif('tell me about yourself' in speech or 'about yourself' in speech):
                 about()
-            elif('exit voice support' or 'quit voice support' or 'terminate' in speech):
+            elif('exit voice support' in speech or 'quit voice support' in speech or 'terminate' in speech or 'exit' in speech or 'quit' in speech or 'yamete' in speech):
                         s.say("Exiting")
                         s.runAndWait()
                         webbrowser.open("http://localhost:8501/")
                         break
-            elif('scan my face' in speech):
+            elif('scan my face' in speech or 'scan' in speech):
                 s.say("Scanning")
                 s.runAndWait()
                 face1()
             else:
                 print("Try again")
-                s.say("Command not found")
+                s.say("Command not found,try again")
                 s.runAndWait()
         except Exception as e:
             print(e)
-            s.say("Say that again sensei")
+            s.say("Say that again")
             s.runAndWait()
 
 
