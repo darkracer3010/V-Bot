@@ -79,7 +79,7 @@ while(1):
             elif('exit voice support' in speech or 'quit voice support' in speech or 'terminate' in speech or 'exit' in speech or 'quit' in speech or 'yamete' in speech):
                         s.say("Exiting")
                         s.runAndWait()
-                        webbrowser.open("http://localhost:8501/")
+                        webbrowser.open("https://share.streamlit.io/darkracer3010/v-bot/main/form.py")
                         break
             elif('scan my face' in speech or 'scan' in speech):
                 s.say("Scanning")
